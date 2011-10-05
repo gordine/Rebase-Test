@@ -1,11 +1,10 @@
 #!/bin/bash
 AUTH="--user Kleidersack:$kleidersackpw"
-echo $AUTH
-PARM='-d "pull[base]=master" \
-      -d "pull[heade]=kleidersack:feature" \
-      -d "pull[title]=feature 1" \
-      -d "pull[body]=some nice things implemented"'
+PARM='-d "pull[base]=master" 
+      -d "pull[heade]=kleidersack:feature1" 
+      -d "pull[title]=feature_1" 
+      -d "pull[body]=some_nice_things_implemented"'
 URL=https://github.com/api/v2/json/pulls/gordine/Rebase-Test
-CMD="curl $AUTH $PARAM $URL"
+CMD="curl $AUTH $PARM $URL"
 echo $CMD
 $CMD
